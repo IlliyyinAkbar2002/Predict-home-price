@@ -15,8 +15,10 @@ add_selectbox = st.sidebar.selectbox(
     ('Prediction', 'Exploration')
 )
 
+# Create 3 Columns
 col1, col2, col3 = st.columns(3)
 
+# Add content
 with col1:
     st.header('House Price Prediction')
     st.text('This is prediction page')
