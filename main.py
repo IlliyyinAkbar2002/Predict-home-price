@@ -26,13 +26,7 @@ with col1:
 with col2:
     st.header('Image of house price', divider='rainbow')
     st.image("https://static.streamlit.io/examples/dog.jpg")
-    
+
 with col3:
     st.header('House Price Exploration')
     st.text('This is exploration page')
-
-# Random data generator
-df = pd.DataFrame(np.random.randn(50, 20), columns=('col %d' % i for i in range(20)))
-st.table(df)
-
-
