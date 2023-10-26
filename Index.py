@@ -1,11 +1,13 @@
 import streamlit as st
+from PIL import Image
 
 
-def intro():
+def home():
     import streamlit as st
 
-    st.write("# Welcome to Streamlit! 👋")
-    st.sidebar.success("Select a demo above.")
+    st.write("# Predict House Price")
+    image = Image.open('pexels-scott-webb-1029599.jpg')
+    st.image(image)
 
 
 def mapping_demo():
@@ -204,11 +206,11 @@ def data_frame_demo():
 
 
 page_names_to_funcs = {
-    "—": intro,
-    "Plotting Demo": plotting_demo,
+    "Home": home,
+    "Predict house": plotting_demo,
     "Mapping Demo": mapping_demo,
     "DataFrame Demo": data_frame_demo
 }
 
-demo_name = st.sidebar.selectbox("Choose a demo", page_names_to_funcs.keys())
+demo_name = st.sidebar.selectbox("Site-bar", page_names_to_funcs.keys())
 page_names_to_funcs[demo_name]()
